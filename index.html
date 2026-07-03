@@ -57,7 +57,8 @@
         <div class="console-top">
           <div>
             <p class="eyebrow">Prompt</p>
-            <h1>이미지를 만들고<br>웹 결과물로 자동 조립</h1>
+            <h1>Image-to-Site Agent</h1>
+            <p class="hero-summary">생성된 농구 비주얼 5장을 검토 가능한 웹 아티팩트로 조립하는 로컬 자동화 작업공간입니다.</p>
           </div>
           <div class="status-pill">
             <span></span>
@@ -67,7 +68,13 @@
 
         <div class="command-box">
           <span class="prompt-symbol">$</span>
-          <p>generate basketball visual set → compose homepage → verify in browser</p>
+          <p>create images --count 5 && build homepage --mode antigravity && verify output</p>
+        </div>
+
+        <div class="console-output" aria-label="Execution log">
+          <div><span>09:22</span><p>Image Agent generated 5 visual artifacts.</p></div>
+          <div><span>09:31</span><p>Design Agent composed manager, preview, and artifact panels.</p></div>
+          <div><span>09:42</span><p>QA Agent checked modal navigation and local server response.</p></div>
         </div>
 
         <div id="agents" class="agent-grid" aria-label="Agent status cards">
