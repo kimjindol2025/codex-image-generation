@@ -1,4 +1,5 @@
 const items = [...document.querySelectorAll(".gallery-item")];
+const triggers = [...document.querySelectorAll(".gallery-trigger")];
 const modal = document.querySelector("#imageModal");
 const modalImage = modal.querySelector("img");
 const modalTitle = modal.querySelector("strong");
@@ -6,11 +7,10 @@ const modalDetail = modal.querySelector("span");
 const closeButton = modal.querySelector(".modal-close");
 const nextButton = modal.querySelector(".modal-next");
 const prevButton = modal.querySelector(".modal-prev");
-const heroButtons = [...document.querySelectorAll(".hero-strip button")];
 let activeIndex = 0;
 
 function openModal(index) {
-  activeIndex = index;
+  activeIndex = (index + items.length) % items.length;
   const item = items[activeIndex];
   const image = item.querySelector("img");
 
@@ -26,21 +26,18 @@ function openModal(index) {
 function closeModal() {
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
-  items[activeIndex].querySelector("button").focus();
+  const returnTarget = document.querySelector(`.gallery-trigger[data-index="${activeIndex}"]`);
+  returnTarget?.focus();
 }
 
 function moveModal(direction) {
-  activeIndex = (activeIndex + direction + items.length) % items.length;
-  openModal(activeIndex);
+  openModal(activeIndex + direction);
 }
 
-items.forEach((item, index) => {
-  item.querySelector("button").addEventListener("click", () => openModal(index));
-  item.addEventListener("dblclick", () => openModal(index));
-});
-
-heroButtons.forEach((button) => {
-  button.addEventListener("click", () => openModal(Number(button.dataset.jump)));
+triggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    openModal(Number(trigger.dataset.index));
+  });
 });
 
 closeButton.addEventListener("click", closeModal);
