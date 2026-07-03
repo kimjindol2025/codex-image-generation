@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Full Court Youth</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" aria-label="Main navigation">
+    <a class="brand" href="#top">FULL COURT YOUTH</a>
+    <nav>
+      <a href="#story">Story</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#finale">Finale</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Basketball anime homepage hero">
+      <img
+        class="hero-image"
+        src="./assets/ig_0932f9282bf2fb9d016a472ea8a4f48191ba08fdd1e94c7f48.png"
+        alt="A high-school basketball player leaping for a dunk in a dramatic retro anime gym scene"
+      >
+      <div class="hero-shade"></div>
+      <div class="hero-frame">
+        <p class="kicker">Summer Invitational · Original visual set</p>
+        <h1>코트가<br>멈추는 순간</h1>
+        <p class="hero-copy">5개의 장면으로 만든 고교 농구 비주얼 랜딩. 덩크, 점프슛, 팀 허들, 라이벌전, 마지막 패스까지.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#gallery">갤러리 보기</a>
+          <a class="button ghost" href="#story">스토리 흐름</a>
+        </div>
+      </div>
+      <aside class="hero-strip" aria-label="Featured scenes">
+        <button type="button" data-jump="0" aria-label="Dunk scene">
+          <img src="./assets/ig_0932f9282bf2fb9d016a472ea8a4f48191ba08fdd1e94c7f48.png" alt="">
+        </button>
+        <button type="button" data-jump="1" aria-label="Jump shot scene">
+          <img src="./assets/ig_0932f9282bf2fb9d016a472f961f408191911f29d3299e9abf.png" alt="">
+        </button>
+        <button type="button" data-jump="2" aria-label="Team huddle scene">
+          <img src="./assets/ig_0932f9282bf2fb9d016a472dfcf0708191a924d5b99e04b406.png" alt="">
+        </button>
+      </aside>
+    </section>
+
+    <section class="scoreboard" aria-label="Season stats">
+      <div><strong>05</strong><span>Scenes</span></div>
+      <div><strong>04</strong><span>Quarters</span></div>
+      <div><strong>10</strong><span>Seconds</span></div>
+      <div><strong>01</strong><span>Last Play</span></div>
+    </section>
+
+    <section id="story" class="story-section">
+      <div class="section-heading">
+        <p class="kicker">Game Flow</p>
+        <h2>한 시즌을 한 번에 훑는 스포츠 티저</h2>
+      </div>
+      <div class="story-board">
+        <article>
+          <span>Act 01</span>
+          <h3>공중전</h3>
+          <p>첫 장면은 덩크입니다. 시선은 림으로 고정되고, 페이지의 톤은 여기서 결정됩니다.</p>
+        </article>
+        <article>
+          <span>Act 02</span>
+          <h3>정적</h3>
+          <p>경기보다 조용한 연습 후 허들. 캐릭터의 열과 팀의 리듬을 잡아줍니다.</p>
+        </article>
+        <article>
+          <span>Act 03</span>
+          <h3>결정</h3>
+          <p>마지막 공격은 슛이 아니라 패스입니다. 장면의 긴장감을 피날레로 넘깁니다.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+      <div class="section-heading split">
+        <div>
+          <p class="kicker">Gallery</p>
+          <h2>클릭해서 크게 보기</h2>
+        </div>
+        <p class="section-note">오리지널 이미지 5장을 포스터형 카드로 재구성했습니다.</p>
+      </div>
+
+      <div class="gallery">
+        <figure class="gallery-item feature" data-title="Dunk" data-detail="림을 향해 치고 올라가는 첫 장면">
+          <img src="./assets/ig_0932f9282bf2fb9d016a472ea8a4f48191ba08fdd1e94c7f48.png" alt="Dunk action scene">
+          <figcaption><span>Dunk</span><button type="button" aria-label="Dunk 크게 보기">Open</button></figcaption>
+        </figure>
+        <figure class="gallery-item" data-title="Jump Shot" data-detail="수비 손끝을 넘기는 점프슛">
+          <img src="./assets/ig_0932f9282bf2fb9d016a472f961f408191911f29d3299e9abf.png" alt="Jump shot action scene">
+          <figcaption><span>Jump Shot</span><button type="button" aria-label="Jump Shot 크게 보기">Open</button></figcaption>
+        </figure>
+        <figure class="gallery-item tall" data-title="Huddle" data-detail="연습 뒤에도 끝나지 않는 팀의 대화">
+          <img src="./assets/ig_0932f9282bf2fb9d016a472dfcf0708191a924d5b99e04b406.png" alt="Team huddle after practice">
+          <figcaption><span>Huddle</span><button type="button" aria-label="Huddle 크게 보기">Open</button></figcaption>
+        </figure>
+        <figure class="gallery-item" data-title="Rival" data-detail="여름 코트 위의 일대일 승부">
+          <img src="./assets/ig_0932f9282bf2fb9d016a472f49ba7881918b6d7e7239f25bf0.png" alt="Outdoor one-on-one basketball scene">
+          <figcaption><span>Rival</span><button type="button" aria-label="Rival 크게 보기">Open</button></figcaption>
+        </figure>
+        <figure class="gallery-item wide" data-title="Last Pass" data-detail="마지막 10초, 슛보다 빠른 패스">
+          <img src="./assets/ig_0932f9282bf2fb9d016a472e6b73dc8191b71251a4e4dedb8f.png" alt="No-look pass during a final game">
+          <figcaption><span>Last Pass</span><button type="button" aria-label="Last Pass 크게 보기">Open</button></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="finale" class="finale-section">
+      <img src="./assets/ig_0932f9282bf2fb9d016a472e6b73dc8191b71251a4e4dedb8f.png" alt="Final no-look pass scene">
+      <div class="finale-copy">
+        <p class="kicker">Final Possession</p>
+        <h2>슛보다 먼저,<br>공간을 본다</h2>
+        <a class="button primary" href="#top">다시 보기</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="imageModal" aria-hidden="true" role="dialog" aria-label="확대 이미지">
+    <button class="modal-close" type="button" aria-label="닫기">Close</button>
+    <button class="modal-arrow modal-prev" type="button" aria-label="이전 이미지">Prev</button>
+    <figure class="modal-panel">
+      <img src="" alt="">
+      <figcaption>
+        <strong></strong>
+        <span></span>
+      </figcaption>
+    </figure>
+    <button class="modal-arrow modal-next" type="button" aria-label="다음 이미지">Next</button>
+  </div>
+</body>
+</html>
